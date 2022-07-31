@@ -2,8 +2,14 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders expenses table', () => {
+test('Renders expenses table', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const expensesTab = screen.getByText(/Expenses List/i);
+  expect(expensesTab).toBeInTheDocument();
+});
+
+test('Renders reports table', () => {
+  render(<App />);
+  const reportsTab = screen.getByText(/Reports/i);
+  expect(reportsTab).toBeInTheDocument();
 });

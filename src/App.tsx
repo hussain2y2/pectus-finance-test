@@ -100,7 +100,6 @@ function App() {
           <Tab>Expenses List</Tab>
           <Tab>Reports</Tab>
         </TabList>
-
         <TabPanel>
           <Table data={tableData} />
         </TabPanel>
