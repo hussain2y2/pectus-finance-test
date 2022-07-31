@@ -38,7 +38,7 @@ function App() {
     let reader = response.body.getReader();
     let decoder = new TextDecoder('utf-8');
 
-    return await reader.read().then(function (result: any) {
+    return await reader.read().then((result: any) => {
       return decoder.decode(result.value);
     });
   }
